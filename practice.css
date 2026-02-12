@@ -1,0 +1,136 @@
+:root {
+  --accent: #7cffb2;
+  --bg: #0b0f0d;
+  --text: #d7eede;
+  --muted: #6f8f80;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 80px 40px;
+  gap: 40px;
+}
+
+.lessons {
+  width: 200px;
+  overflow-y: auto;
+}
+
+.lesson {
+  padding: 10px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.lesson.active {
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+}
+
+.practice {
+  flex: 1;
+}
+
+.lesson-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.typing-box {
+  font-size: 24px;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.typing-box span {
+  opacity: .3;
+}
+
+.typing-box span.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.typing-box span.correct {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.typing-box span.wrong {
+  color: #ff6b6b;
+  opacity: 1;
+}
+
+.stats {
+  margin-top: 30px;
+  color: var(--muted);
+  display: flex;
+  gap: 30px;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-box {
+  border: 1px solid var(--accent);
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 25px var(--accent);
+}
+
+.popup-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.popup button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+/* VISIBLE SPACE FIX */
+.typing-box span.space {
+  display: inline-block;
+  min-width: 12px;
+}
+
+.typing-box span.space.wrong {
+  border: 1px solid #ff6b6b;
+  background: rgba(255,107,107,0.15);
+}

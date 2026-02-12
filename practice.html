@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Practice · itachiType</title>
+  <link rel="stylesheet" href="css/practice.css" />
+</head>
+<body>
+
+<a href="index.html" class="home-btn">home</a>
+
+<div class="container">
+
+  <aside class="lessons" id="lessonList"></aside>
+
+  <main class="practice">
+    <div class="lesson-title" id="lessonTitle"></div>
+
+    <div class="typing-box" id="typingText"></div>
+
+    <div class="stats">
+      <span>accuracy: <b id="accuracy">100%</b></span>
+      <span>mistakes: <b id="mistakes">0</b></span>
+    </div>
+  </main>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h2>Lesson completed 🎉</h2>
+    <div class="popup-actions">
+      <button id="repeat">repeat lesson</button>
+      <button id="next">next lesson</button>
+      <div class="shortcuts">
+  <small>Alt + N → Next lesson</small><br>
+  <small>Alt + R → Repeat lesson</small>
+</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/practice.js"></script>
+</body>
+</html>
